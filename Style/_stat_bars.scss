@@ -1,0 +1,67 @@
+.customer_photo{
+	width: 100%;
+	@include aspect-ratio(3, 4);
+	background-color: lightgray;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.stat-bar-container{
+	padding: 0 0 1.5em;
+}
+
+.stat-bar-background, .stat-bar-overlay{
+	height: 1.5rem;
+}
+
+
+.stat-bar-background{
+	background: $red; /* Old browsers */
+	background: -moz-linear-gradient(left,  $red 0%, $yellow 50%, $green 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  $red 0%,$yellow 50%,$green 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  $red 0%,$yellow 50%,$green 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$red', endColorstr='$green',GradientType=1 ); /* IE6-9 */
+	padding: 0;
+	.row{
+		margin-right: 0;
+	}
+}
+
+.stat-bar-overlay{
+	background-color: $gray;
+	width: 0%;
+	padding: 0;
+}
+
+.rating{
+	text-align: right;
+	font-size: .8rem;
+	vertical-align: middle;
+	line-height: 1.5rem;
+	font-weight: bold;
+	padding-left: 0;
+}
+
+.stat-title{
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: .25em;
+}
+
+@media screen and (min-width: $md){
+	.rating{
+		text-align: center;
+		font-size: 1rem;
+		line-height: 1.8rem;
+	}
+}
+
+@media screen and (min-width: $lg){
+	.stat-bar-background, .stat-bar-overlay{
+		height: 1.8rem;
+	}
+	.rating{
+		line-height: 1.8rem;
+	}
+}
